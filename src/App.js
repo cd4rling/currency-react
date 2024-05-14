@@ -17,17 +17,16 @@ const App = () => {
   return (
     <Router>
       <div className="container">
-        <h2>Currency React App</h2>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+          <a className="navbar-brand" href="#">Navbar</a>
+          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <Link class="nav-item nav-link active" to="/">Rates<span class="sr-only">(current)</span></Link>
-              <Link class="nav-item nav-link" to="/convert/">Convert</Link>
-              <Link class="nav-item nav-link" to="/charts/">Charts</Link>
+          <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div className="navbar-nav">
+              <Link className="nav-item nav-link active" to="/">Rates<span className="sr-only">(current)</span></Link>
+              <Link className="nav-item nav-link" to="/convert/">Convert</Link>
+              <Link className="nav-item nav-link" to="/charts/">Charts</Link>
             </div>
           </div>
         </nav>
@@ -39,11 +38,11 @@ const App = () => {
         </Switch>
       </div>
       <footer>
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12">
-              <div class="copyright-box">
-                <p class="copyright"><span><FontAwesomeIcon icon={faFacebook} /><FontAwesomeIcon icon={faInstagram} /><FontAwesomeIcon icon={faTwitter} /></span><span>&copy; 2024 Copyright <strong>D4 Web Development LLC</strong>. All Rights Reserved</span></p>
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-12">
+              <div className="copyright-box">
+                <p className="copyright"><span><FontAwesomeIcon icon={faFacebook} /><FontAwesomeIcon icon={faInstagram} /><FontAwesomeIcon icon={faTwitter} /></span><span>&copy; 2024 Copyright <strong>D4 Web Development LLC</strong>. All Rights Reserved</span></p>
               </div>
             </div>
           </div>
