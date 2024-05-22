@@ -5,9 +5,95 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url(../public/WireEarth.jpg);
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.container {
+  max-width: 85%;
+  margin-bottom: 5px;
+  min-height: 90vh;
+}
+
+.navbar-nav {
+  text-align: right;
+}
+
+.nav-link:hover, .navbar-toggler:hover, .nav-link:active{
+  color: white;
+}
+
+@media (max-width: 768px) { 
+  #NavBar{
+      position: absolute;
+      width: 100%;
+      z-index: 9999;
+  }
+}
+
+.routerContent {
+  background-color: rgb(223, 235, 243);
+  opacity: .75;
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+footer {
+  width: 100%;
+  height: 10vh;
+  background-color: white;
+  opacity: 75%;
+  padding: 10px;
+  text-align: right;
+  padding-right: 25px;
+}
+
+.rateContainer {
+  min-height: 50vh;
+}
+
+.rateContainer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.rateBox {
+  padding: 0;
+}
+
+.inputField {
+  width: 90px;
+  padding: 3px;
+  font-size: auto; 
+}
+
+.spanLeft, .spanCenter, .spanRight {
+  display: inline-block;
+  width: 80px;
+}
+
+.spanLeft {
+  text-align: left;
+}
+
+.spanCenter {
+  text-align: center;
+}
+
+.spanRight {
+  text-align:right
+}
+
+
+
+

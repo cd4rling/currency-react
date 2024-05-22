@@ -4,22 +4,26 @@ class CurrencyDropdown extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedCurrency: 'USD', // Default to USD
-      currencies: [], // Array to store fetched currencies
+      selectedCurrency: props.defaultValue || 'USD',
+      currencies: [],
     };
   }
 
   componentDidMount() {
-    // Fetch currency options when the component mounts
     fetch('https://api.frankfurter.app/currencies')
       .then(response => response.json())
       .then(data => {
-        // Store fetched currencies in the component state
         this.setState({ currencies: Object.keys(data) });
       })
       .catch(error => {
         console.error('Error fetching currencies:', error);
       });
+  }
+
+  componentDidUpdate(prevProps) {
+    if (this.props.defaultValue !== prevProps.defaultValue) {
+      this.setState({ selectedCurrency: this.props.defaultValue });
+    }
   }
 
   handleChange = (event) => {
@@ -33,7 +37,6 @@ class CurrencyDropdown extends React.Component {
 
     return (
       <div>
-        <label htmlFor="currency">Choose a currency:</label>
         <select id="currency" value={selectedCurrency} onChange={this.handleChange}>
           {currencies.map(currency => (
             <option key={currency} value={currency}>{currency}</option>

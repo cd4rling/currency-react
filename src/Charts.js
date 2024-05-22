@@ -1,14 +1,21 @@
 import React from 'react';
-import { Link } from "react-router-dom";
-import { json, checkStatus } from './utils';
 
-class Chart extends React.Component {
+class Charts extends React.Component {
     constructor(props) {
       super(props);
-      this.state = {
-        chart: null,
-      }
+      console.log('convert component constructed')
     }
-}
 
-export default Chart;
+    render () {
+      console.log('convert component rendered')
+      return (
+        <div className='container'>
+          <h3>Charts coming soon</h3>
+          <h3>Please check back later</h3>
+        </div>
+      );
+    }
+  }
+
+
+export default Charts;
