@@ -6,8 +6,10 @@ import Charts from './Charts';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faCake } from '@fortawesome/free-solid-svg-icons'
 
 import './App.css';
+import { faCommentsDollar } from '@fortawesome/free-solid-svg-icons';
 
 const NotFound = () => {
   return <h2>404 Not Found</h2>;
@@ -23,13 +25,13 @@ const App = () => {
       <div className="container">
         <nav className="navbar navbar-expand-lg navbar-light">
           <div className="container-fluid">
-            <Link className="navbar-brand" to="/">BRAND</Link>
+            <Link className="navbar-brand" to="/" ><FontAwesomeIcon icon={faCommentsDollar} /></Link>
             <button 
               className="navbar-toggler" 
               type="button" 
               data-bs-toggle="collapse" 
               data-bs-target="#navbarSupportedContent" 
-              aria-controls="navbarSupportedContent" 
+              aria-controls="navbarSupportedContent"
               aria-expanded={!isNavCollapsed ? true : false} 
               aria-label="Toggle navigation"
               onClick={handleNavCollapse}

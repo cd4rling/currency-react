@@ -30,6 +30,12 @@ code {
 
 .nav-link:hover, .navbar-toggler:hover, .nav-link:active{
   color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.brandLogo {
+  width: 20px;
+  height: 20px;
 }
 
 @media (max-width: 768px) { 
