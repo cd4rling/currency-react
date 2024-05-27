@@ -21,7 +21,13 @@ class Convert extends React.Component {
   }
 
   componentDidMount() {
-    this.fetchData(this.state.base1);
+    const queryParams = new URLSearchParams(this.props.location.search);
+    const base1 = queryParams.get('base1') || this.state.base1;
+    const base2 = queryParams.get('base2') || this.state.base2;
+
+    this.setState({ base1, base2 }, () => {
+      this.fetchData(this.state.base1);
+    });
   }
 
   fetchData(base) {

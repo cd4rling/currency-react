@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 class Charts extends React.Component {
     constructor(props) {
       super(props);
@@ -10,8 +11,7 @@ class Charts extends React.Component {
       console.log('convert component rendered')
       return (
         <div className='container'>
-          <h3>Charts coming soon</h3>
-          <h3>Please check back later</h3>
+          <h3>Historical Currency Data</h3>
         </div>
       );
     }

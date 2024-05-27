@@ -1,6 +1,7 @@
 import React from 'react';
 import CurrencyDropdown from './Currency';
 import { json, checkStatus } from './utils';
+import { Link } from 'react-router-dom';
 
 class Rates extends React.Component {
   constructor(props) {
@@ -37,7 +38,7 @@ class Rates extends React.Component {
   }
 
   render() {
-    const { data, rates, error } = this.state;
+    const { data, rates, error, base } = this.state;
     const rateArray = Object.entries(rates);
   
     const column1 = rateArray.slice(0, 15); // First 15 items
@@ -60,7 +61,7 @@ class Rates extends React.Component {
               <ul className=''>
                 {Object.values(column1).map(([currency, rate]) => (
                   <li key={currency}>
-                    <span className='spanLeft'>{currency}</span><span className='spanCenter'>:</span><span className='spanRight'>{rate}</span>
+                    <span className='spanLeft'><Link to={`/convert?base1=${base}&base2=${currency}`}>{currency}</Link></span><span className='spanCenter'>:</span><span className='spanRight'>{rate}</span>
                   </li>
                 ))}
               </ul>
@@ -69,7 +70,7 @@ class Rates extends React.Component {
               <ul className=''>
                 {Object.values(column2).map(([currency, rate]) => (
                   <li key={currency}>
-                    <span className='spanLeft'>{currency}</span><span className='spanCenter'>:</span><span className='spanRight'>{rate}</span>
+                    <span className='spanLeft'><Link to={`/convert?base1=${base}&base2=${currency}`}>{currency}</Link></span><span className='spanCenter'>:</span><span className='spanRight'>{rate}</span>
                   </li>
                 ))}
               </ul>
