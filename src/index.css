@@ -77,6 +77,17 @@ footer {
   padding: 0;
 }
 
+.canvasBox {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+canvas {
+  max-width: 80%; /* Ensures the canvas does not overflow the container */
+  max-height: 80%; /* Ensures the canvas does not overflow the container */
+}
+
 .inputField {
   width: 90px;
   padding: 3px;
