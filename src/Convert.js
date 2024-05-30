@@ -3,6 +3,7 @@ import CurrencyDropdown from './Currency';
 import { json, checkStatus } from './utils';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRotate } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 class Convert extends React.Component {
   constructor(props) {
@@ -108,11 +109,11 @@ class Convert extends React.Component {
           <h3 className='text-center'>Currency Conversion</h3>
           <div className='row my-5 py-2'>
             <div className='col-lg-5 d-flex justify-content-center align-items-center'>
-            <h4>From: </h4><CurrencyDropdown onBaseChange={this.handleBaseChange1} defaultValue={base1} />
+              <h4>From: </h4><CurrencyDropdown onBaseChange={this.handleBaseChange1} defaultValue={base1} />
             </div>
             <div className='col-lg-2 d-flex justify-content-center align-items-center'><FontAwesomeIcon icon={faRotate} onClick={this.swapBases} style={{ cursor: 'pointer' }} /></div>
             <div className='col-lg-5 d-flex justify-content-center align-items-center'>
-            <h4>To: </h4><CurrencyDropdown onBaseChange={this.handleBaseChange2} defaultValue={base2} />
+              <h4>To: </h4><CurrencyDropdown onBaseChange={this.handleBaseChange2} defaultValue={base2} />
             </div>
           </div>
           <div className='row my-5 py-2'>
@@ -131,7 +132,12 @@ class Convert extends React.Component {
               <h4>is</h4>
             </div>
             <div className='col-lg-5 d-flex justify-content-center align-items-center'>
-            <h4>{value2 !== null ? value2 : 'N/A'} {base2}</h4>
+              <h4>{value2 !== null ? value2 : 'N/A'} {base2}</h4>
+            </div>
+            <div className='d-flex justify-content-center align-items-center mt-4'>
+              <Link to={`/charts?base1=${base1}&base2=${base2}`}>
+                <button className='btn btn-primary'>View Charts</button>
+              </Link>
             </div>
           </div>
         </div>
